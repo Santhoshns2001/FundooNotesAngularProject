@@ -1,0 +1,180 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color:white ;
+}
+
+.mat-card{
+    height: 575px;
+    width: 70%;
+    margin-top: -50px;
+    background-color :#f6f6f6;
+}
+
+.image{
+    height: 45px;
+    width: 120px;
+    padding: 30px 0px 0px 30px;
+}
+
+.sign_in{
+    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 26px;
+    margin-top: 7px ;
+    padding-left: 30px;
+}
+
+.text2{
+    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 16px;
+    margin-top: -10px ;
+    padding-left: 32px;
+    color:#1f1f1f ;
+}
+
+
+.first_lastname{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    margin-left: 30px;
+}
+.username{
+    width: 472px;
+    margin-left: 30px;
+}
+.text_types{
+    margin-top: -20px;
+    margin-left: 29px;
+}
+
+.form{
+    width: 230px;
+    display: flex;
+}
+
+.forgot_password{
+    color: #0b57d0!important;
+    margin-top: -20px;
+    margin-left: -7px;
+
+}
+
+.message{
+   color: #444746;
+    margin-left: 27px;
+    margin-top: -17px;
+    font-size: 14px;
+    font-family:  "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+}
+.message1{
+    color: #0b57d0!important;
+    margin-top: -23px;
+    font-size: 14px;
+    margin-left: -6px;
+}
+
+.message2{
+    color: #0b57d0!important;
+    margin-top: 18px;
+    margin-left: 180px;
+}
+
+   
+.checkbox{
+    margin-top: -35px;
+    margin-left: 15px;
+}
+
+.main{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.image2{
+height: 250px;
+width: 240px;
+padding-right: 100px;
+padding-top: 40px;
+
+}
+.sign_instead{
+    color: #0b57d0!important ;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+.next_buuton{
+    background-color: #0b57d0!important;
+    color: white!important;
+    margin-left: 420px;
+    margin-top: -60px;
+    width: 80px;
+
+}
+
+.link_button{
+   
+    background-color: #0b57d0!important;
+    color: white!important;
+    margin-top: -62px;
+    margin-left: 345px;
+    border-radius: 55px;
+}
+
+.mat-card2{
+    height: 50px;
+    width: 70%;
+    background-color: #0b57d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -115px;
+    margin-left: 200px;
+}
+
+.footer{
+    width: 70%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 5px;
+    padding: 0px 10px;
+    background-color:white;
+}
+
+.ft-d2{
+    display: flex;
+    gap: 30px;
+}
+
+.ft-d1-select{
+    height: 30px;
+    width: fit-content;
+    background-color:white;
+    border: none;
+    color: rgb(73, 73, 73);
+}
+
+.ft-d2 button{
+    border-radius: 8px;
+    color: rgb(73, 73, 73);
+    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.00625rem;
+    line-height: 1.3333333333;
+    outline: none;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+
