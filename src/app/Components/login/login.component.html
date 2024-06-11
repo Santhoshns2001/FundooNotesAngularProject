@@ -1,4 +1,5 @@
-<div class="container">
+
+  <div class="container">
     <mat-card class="mat-card">
       <mat-card-content>
         <div>
@@ -14,18 +15,20 @@
                 </span>
           </div>
           <div class="child">
+            <form [formGroup]="Loginform"(ngSubmit)="OnLogin()">
              <div>
                <mat-form-field appearance="outline" class="form">
                    <mat-label>Email or Phone</mat-label>
-                   <input matInput placeholder="Email or Phone">
+                   <input matInput placeholder="Email or Phone" formControlName="Email">
                </mat-form-field>
               </div>
               <div>
                  <mat-form-field appearance="outline" class="form">
                     <mat-label>Enter your Password</mat-label>
-                    <input matInput placeholder="Enter your Password">
+                    <input matInput placeholder="Enter your Password" formControlName="password">
                   </mat-form-field>
               </div>
+            
     <div>
       <button class="forgot_password" mat-button >Forgot Password?</button>
     </div>
@@ -40,8 +43,9 @@
       <button class="message2" mat-button >Create account</button>
     </div>
     <div>
-      <a class="link_button" mat-flat-button href="https://www.google.com/" target="_blank">Submit</a>
+      <button class="link_button" mat-flat-button>Submit</button>
     </div>
+  </form>
         </div>
       </div>
       </mat-card-content>

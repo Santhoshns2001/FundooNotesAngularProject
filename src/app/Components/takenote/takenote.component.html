@@ -1,0 +1,55 @@
+<form [formGroup]="CreateNotesForm"(ngSubmit)="OnNotesCreate()">
+<div style="padding: 20px;">
+    <div class="container">
+        <mat-accordion class="title">
+        <mat-expansion-panel style="width: 50%; margin-top: 20px;" hideToggle>
+            <mat-expansion-panel-header>
+              
+                <mat-form-field style="width: 100%; ">
+                    <input matInput placeholder="Title" formControlName="title" >
+                </mat-form-field>
+                <div style="direction: rtl; margin: auto;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m640-480 80 80v80H520v240l-40 40-40-40v-240H240v-80l80-80v-280h-40v-80h400v80h-40v280Zm-286 80h252l-46-46v-314H400v314l-46 46Zm126 0Z"/></svg>
+                </div>
+            </mat-expansion-panel-header>
+            <mat-form-field style="width: 100%; ">
+                <input matInput placeholder="Take a note..." type="text" formControlName="description">
+            </mat-form-field>
+            <mat-action-row class="notefooter" style="direction: ltr;">
+               <div>
+                <button mat-icon-button title="Remind me">
+                    <mat-icon>add_alert</mat-icon>
+                </button>
+                <button mat-icon-button title="collaborator">
+                    <mat-icon>person_add</mat-icon>
+                </button>
+                <button mat-icon-button title="Background options">
+                    <mat-icon>palette</mat-icon>
+                </button>
+                <button mat-icon-button title="Add Image">
+                    <mat-icon>image</mat-icon>
+                </button>
+                <button mat-icon-button title="Archive">
+                    <mat-icon>archive</mat-icon>
+                </button>
+                <button mat-icon-button title="more">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <button mat-icon-button title="undo">
+                    <mat-icon>undo</mat-icon>
+                </button>
+                <button mat-icon-button title="redo">
+                    <mat-icon>redo</mat-icon>
+                </button>
+               </div>
+                <div>
+                    <button mat-button class="close_button">
+                        <span style="font-size: 18px;">Close</span>
+                    </button>
+                </div>
+            </mat-action-row>
+          </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>
+</form>

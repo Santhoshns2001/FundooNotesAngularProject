@@ -1,0 +1,31 @@
+<mat-toolbar>
+    <mat-toolbar-row class="navbar">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <img class="keep_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz1m95VHC8IohHRPhrs4zky6sqOez_ZeiHww&s">
+        <p style="margin-left: 7px; margin-top: 15px; font-size: 24px; color: #5f6368;">Keep</p>
+
+        <div>
+            
+        </div>
+
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container style="height: calc(100vh - 74px);">
+    <mat-sidenav #sidenav opened="true" mode="side" class="listcontainer">
+        <mat-nav-list class="sidenavlist">
+            <a mat-list-item><img class="sidenav-images" src="../../assets/notes.svg"><label class="label" >Notes</label></a>
+            <a mat-list-item><img class="sidenav-images" src="../../assets/notification.svg"><label class="label" >Reminders</label></a>
+            <a mat-list-item><img class="sidenav-image" src="../../assets/edit.svg"><label class="label" >Edit labels</label></a>
+            <a mat-list-item><img class="sidenav-image" src="../../assets/archive.svg"><label class="label" >Archive</label></a>
+            <a mat-list-item><img class="sidenav-image" src="../../assets/delete.svg"><label class="label" >Trash</label></a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+       <router-outlet>
+        
+       </router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

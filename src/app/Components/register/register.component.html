@@ -12,46 +12,51 @@
                     <span>
                       <h1 class="text2"> to continue to Gmail</h1>
                     </span>
+                    <form [formGroup]="RegisterForm"(ngSubmit)="OnRegister()">
+
                             <div class="first_lastname">
                              <mat-form-field appearance="outline" class="form">
                                 <mat-label>First Name</mat-label>
-                                   <input matInput placeholder="First Name">
+                                   <input matInput placeholder="First Name" formControlName="firstname">
                              </mat-form-field>
 
                              <mat-form-field appearance="outline" class="form">
                                 <mat-label>Last Name</mat-label>
-                                 <input matInput placeholder="Last Name">
+                                 <input matInput placeholder="Last Name" formControlName="lastname">
                                 </mat-form-field>
                             </div>
-                                <div>
+                            <div>
                                    <mat-form-field class="username" appearance="outline">
                                         <mat-label>Username</mat-label>
-                                         <input matInput placeholder="Username">
-                                        <mat-icon matSuffix style="padding-right: 10px; color: rgb(73, 73, 73);"> &#64;gmail.com </mat-icon>
+                                         <input matInput placeholder="Username" formControlName="email">
+                                        <span matSuffix style="padding-right: 10px; color: rgb(73, 73, 73);"> &#64;gmail.com</span>
                                     </mat-form-field>
-                                </div>
+                          </div>
                                   <p class="message">you can use letter, numbers & periods</p>
-                                    <div>
-                                      <div class="first_lastname" style="margin-top: 20px;">
+                          <div class="first_lastname" style="margin-top: 20px;">
+                                      
                                          <mat-form-field appearance="outline" class="form">
                                              <mat-label>Password</mat-label>
-                                                 <input matInput placeholder="Password" [type]="hide?'password':'text'">
+                                                 <input matInput placeholder="Password" [type]="hide?'password':'text'" formControlName="password">
                                          </mat-form-field>
 
                                              <mat-form-field appearance="outline" class="form">
                                                     <mat-label>Confirm</mat-label>
-                                                     <input matInput placeholder="Confirm" [type]="hide?'password':'text'">
+                                                     <input matInput placeholder="Confirm" [type]="hide?'password':'text'" formControlName="confirmpassword">
                                             </mat-form-field>
-                                        </div>
+                                        
+                                          </div>
                                              <p class="message">Use 8 or more characters with max of letter ,numbers & symbols</p>
                                                      <mat-checkbox class="checkbox" (change)="hide=!hide">Show Password</mat-checkbox>
-                                     </div>
+                                    
+                                   
                                      <div>
                                         <button class="sign_instead" mat-button >Sign in instead</button>
                                      </div>
                                      <div>
-                                        <a class="next_buuton" mat-flat-button href="https://www.google.com/" target="_blank">Next</a>
+                                        <button class="next_buuton" mat-flat-button>Next</button>
                                      </div>
+                                    </form>
            
                </div>
                <div class="image_2">

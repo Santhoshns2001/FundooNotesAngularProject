@@ -1,0 +1,14 @@
+
+
+
+<div *ngFor="let notes of notesList " class="card">
+    <mat-card >
+       <mat-card-header>
+        <mat-card-title>{{notes.title}}</mat-card-title>
+       </mat-card-header>
+       <mat-card-content>
+        <div>{{notes.description}}</div>
+        <div>{{notes.notesId}}</div>
+       </mat-card-content>
+    </mat-card>
+</div>
