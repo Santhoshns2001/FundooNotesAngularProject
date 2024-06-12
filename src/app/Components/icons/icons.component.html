@@ -1,0 +1,51 @@
+
+<mat-action-row class="notefooter" style="direction: ltr;">
+    <div>
+     <button mat-icon-button title="Remind me">
+         <mat-icon>add_alert</mat-icon>
+     </button>
+
+     <button mat-icon-button title="collaborator">
+         <mat-icon>person_add</mat-icon>
+     </button>
+
+     <button mat-icon-button title="Background options">
+         <mat-icon>palette</mat-icon>
+     </button>
+
+     <button mat-icon-button title="Add Image">
+         <mat-icon>image</mat-icon>
+     </button>
+
+     <button mat-icon-button  (click)="onArchive()" title="Archive">
+         <mat-icon>archive</mat-icon>
+     </button>
+
+     <button mat-icon-button [matMenuTriggerFor]="moremenu" title="more">
+         <mat-icon>more_vert</mat-icon>
+     </button>
+     <mat-menu  #moremenu="matMenu" xPosition="before">
+        <button mat-menu-item (click)="onDelete()">Delete Note </button>
+        <button mat-menu-item >Add lebal</button>
+        <button mat-menu-item >Add drawing</button>
+        <button mat-menu-item >Make a copy</button>
+        <button mat-menu-item >Show checkboxes</button>
+     </mat-menu>
+
+     <button mat-icon-button title="undo">
+         <mat-icon>undo</mat-icon>
+     </button>
+
+     <button mat-icon-button title="redo">
+         <mat-icon>redo</mat-icon>
+     </button>
+    </div>
+     <div>
+         <button mat-button class="close_button">
+             <span style="font-size: 18px;">Close</span>
+         </button>
+     </div>
+ </mat-action-row>
+
+ 
+

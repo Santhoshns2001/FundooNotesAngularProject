@@ -25,6 +25,9 @@ import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.component';
+import { IconsComponent } from './Components/icons/icons.component';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 
 @NgModule({
@@ -38,6 +41,8 @@ import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.co
     ForgotpasswordComponent,
     GetAllNotesComponent,
     DisplaynotesComponent,
+    IconsComponent,
+    
     
   ],
   imports: [
@@ -56,7 +61,8 @@ import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.co
     MatExpansionModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule,
   ],
   providers: [
     provideClientHydration(),

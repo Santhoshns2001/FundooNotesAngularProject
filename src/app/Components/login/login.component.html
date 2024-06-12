@@ -20,12 +20,18 @@
                <mat-form-field appearance="outline" class="form">
                    <mat-label>Email or Phone</mat-label>
                    <input matInput placeholder="Email or Phone" formControlName="Email">
+                   <mat-error *ngIf="Loginform.get('Email')?.hasError('required')">
+                   Email Required
+                   </mat-error>
                </mat-form-field>
               </div>
               <div>
                  <mat-form-field appearance="outline" class="form">
                     <mat-label>Enter your Password</mat-label>
                     <input matInput placeholder="Enter your Password" formControlName="password">
+                    <mat-error *ngIf="Loginform.get('password')?.hasError('required')">
+                      password cannot be empty, please enter password. 
+                    </mat-error>
                   </mat-form-field>
               </div>
             

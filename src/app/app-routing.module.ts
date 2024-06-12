@@ -15,10 +15,12 @@ const routes: Routes = [
   {path: 'dashboard',component:DashboardComponent, 
     children:[
       {path:'',redirectTo:'/dashboard/getAllNotes',pathMatch:'full'},
-      {path:'getAllNotes',component:GetAllNotesComponent}
+      {path:'getAllNotes',component:GetAllNotesComponent},
+     
     ]
   },
-  {path:'forgotpassword',component:ForgotpasswordComponent},
+  {path:'forgotpassword',component:ForgotpasswordComponent}
+  
   
 ];
 

@@ -32,6 +32,29 @@ export class NotesService {
 
   }
 
+  archiveNotes(reqData:any){
+
+    console.log(reqData)
+    let header={
+    headers: new HttpHeaders({
+      'content-type':'application/json',
+      'Authorization':'Bearer '+this.token
+    })
+    }
+    return this.httpService.putServices(`https://localhost:5001/api/Notes/ArchiveNotes?NotesId=`+reqData.notesId,reqData,true,header);
+  }
+
+  trashNotes(reqData:any){
+
+    console.log(reqData)
+    let header={
+    headers: new HttpHeaders({
+      'content-type':'application/json',
+      'Authorization':'Bearer '+this.token
+    })
+    }
+    return this.httpService.putServices(`https://localhost:5001/api/Notes/TrashNotes?NotesId=`+reqData.notesId,reqData,true,header);
+  }
 
 
 }
