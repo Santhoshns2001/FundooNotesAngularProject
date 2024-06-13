@@ -1,0 +1,27 @@
+.inputtitle{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 32px;
+
+}
+
+.inputdesc{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+}
+
+.footer_icons{
+    display: flex;
+
+}
+
+.undo_redo{
+    width: 25px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+}
+

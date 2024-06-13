@@ -6,6 +6,7 @@ import { RegisterComponent } from './Components/register/register.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassword.component';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
+import { UpdatenotesComponent } from './Components/updatenotes/updatenotes.component';
 
 
 const routes: Routes = [
@@ -19,8 +20,8 @@ const routes: Routes = [
      
     ]
   },
-  {path:'forgotpassword',component:ForgotpasswordComponent}
-  
+  {path:'forgotpassword',component:ForgotpasswordComponent},
+{path:'updatenotes',component:UpdatenotesComponent},  
   
 ];
 

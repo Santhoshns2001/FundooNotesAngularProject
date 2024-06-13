@@ -1,8 +1,8 @@
 
 
 
-<div *ngFor="let notes of notesList " class="card">
-    <mat-card >
+<!-- <div *ngFor="let notes of notesList " class="card">
+    <mat-card (click)="editNoteDailog(notes)">
        <mat-card-header>
         <mat-card-title>{{notes.title}}</mat-card-title>
        </mat-card-header>
@@ -15,4 +15,29 @@
         <app-icons [notesObject]="notes"></app-icons>
        </div>
     </mat-card>
+</div> -->
+
+
+
+
+<div class="notes-list">
+    <div *ngFor="let notes of notesList" class="card">
+        <mat-card class="notesContainer" [style.background]="notes.colour"  >
+            <mat-card-title mat-input class="title" (click)="editNoteDailog(notes)">
+                <div>{{notes.title}}</div>
+            </mat-card-title>
+
+            <mat-card-content (click)="editNoteDailog(notes)">
+                <div class="text" style="min-height: 35px; display: block; overflow-wrap: break-word;">
+                    <h3 class="">{{notes.description}}</h3>
+                </div>
+            </mat-card-content>
+
+            <div>{{notes.notesId}}</div>
+            <div>
+
+            <app-icons [notesObject]="notes"></app-icons>
+        </div>
+        </mat-card>
+    </div>
 </div>

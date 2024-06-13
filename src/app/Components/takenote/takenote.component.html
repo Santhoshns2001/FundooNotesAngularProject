@@ -4,58 +4,52 @@
         <mat-accordion class="title">
         <mat-expansion-panel style="width: 50%; margin-top: 20px;" hideToggle>
             <mat-expansion-panel-header>
-              
-                <mat-form-field style="width: 100%; ">
-                    <input matInput placeholder="Title" formControlName="title" >
-                </mat-form-field>
-                <div style="direction: rtl; margin: auto;">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m640-480 80 80v80H520v240l-40 40-40-40v-240H240v-80l80-80v-280h-40v-80h400v80h-40v280Zm-286 80h252l-46-46v-314H400v314l-46 46Zm126 0Z"/></svg>
-                </div>
-            </mat-expansion-panel-header>
-            <mat-form-field style="width: 100%; ">
-                <input matInput placeholder="Take a note..." type="text" formControlName="description">
-            </mat-form-field>
-            <mat-action-row class="notefooter" style="direction: ltr;">
-               <div>
-                <button mat-icon-button title="Remind me">
-                    <mat-icon>add_alert</mat-icon>
-                </button>
-
-                <button mat-icon-button title="collaborator">
-                    <mat-icon>person_add</mat-icon>
-                </button>
-
-                <button mat-icon-button title="Background options">
-                    <mat-icon>palette</mat-icon>
-                </button>
-
-                <button mat-icon-button title="Add Image">
-                    <mat-icon>image</mat-icon>
-                </button>
-
-                <button mat-icon-button title="Archive">
-                    <mat-icon>archive</mat-icon>
-                </button>
-
-                <button mat-icon-button title="more">
-                    <mat-icon>more_vert</mat-icon>
-                </button>
-
-                <button mat-icon-button title="undo">
-                    <mat-icon>undo</mat-icon>
-                </button>
-
-                <button mat-icon-button title="redo">
-                    <mat-icon>redo</mat-icon>
-                </button>
-
-               </div>
-                <div>
-                    <button mat-button class="close_button">
-                        <span style="font-size: 18px;">Close</span>
+                <mat-panel-title>
+                    Write Notes here
+                </mat-panel-title>
+                <div class="icons">
+                    <button mat-icon-button>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#5f6368">
+                            <path
+                                d="m424-312 282-282-56-56-226 226-114-114-56 56 170 170ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z" />
+                        </svg>
+                    </button>
+                    <button mat-icon-button>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#5f6368">
+                            <path
+                                d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
+                        </svg>
+                    </button>
+                    <button mat-icon-button>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#5f6368">
+                            <path
+                                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm40-80h480L570-480 450-320l-90-120-120 160Zm-40 80v-560 560Zm140-360q25 0 42.5-17.5T400-620q0-25-17.5-42.5T340-680q-25 0-42.5 17.5T280-620q0 25 17.5 42.5T340-560Z" />
+                        </svg>
                     </button>
                 </div>
-            </mat-action-row>
+            </mat-expansion-panel-header>
+            <input class="update_input"  placeholder="Title" formControlName="title" >
+            <div style="direction: rtl; margin: auto;">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m640-480 80 80v80H520v240l-40 40-40-40v-240H240v-80l80-80v-280h-40v-80h400v80h-40v280Zm-286 80h252l-46-46v-314H400v314l-46 46Zm126 0Z"/></svg>
+            </div>
+            <input class="update_input"  placeholder="Take a note..." type="text" formControlName="description">
+            <div class="notefooter" style="direction: ltr;">
+                <app-icons></app-icons>
+               <div>
+                <img src="../../assets/undo_icon.svg" alt="undo_icon">
+               </div>
+               <div>
+                <img src="../../assets/redo_icon.svg" alt="redo_icon">
+               </div>
+                <div>
+                    <button mat-button class="close_button" (click)="accordion.closeAll()" >
+                        Close
+                    </button>
+                </div>
+            </div>
           </mat-expansion-panel>
         </mat-accordion>
     </div>

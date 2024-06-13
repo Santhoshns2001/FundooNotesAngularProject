@@ -27,6 +27,8 @@ import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.c
 import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.component';
 import { IconsComponent } from './Components/icons/icons.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { UpdatenotesComponent } from './Components/updatenotes/updatenotes.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -42,6 +44,7 @@ import {MatMenuModule} from '@angular/material/menu';
     GetAllNotesComponent,
     DisplaynotesComponent,
     IconsComponent,
+    UpdatenotesComponent,
     
     
   ],
@@ -63,6 +66,7 @@ import {MatMenuModule} from '@angular/material/menu';
     FormsModule,
     HttpClientModule,
     MatMenuModule,
+    MatDialogModule,
   ],
   providers: [
     provideClientHydration(),

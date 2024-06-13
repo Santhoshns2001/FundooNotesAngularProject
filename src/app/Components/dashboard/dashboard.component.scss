@@ -35,5 +35,38 @@
   width: 700px;
   margin-left: 100px;
   margin-top: 20px;
-  background-color: aqua;
+ 
+  display: flex;
+  align-items: center;
+  margin-top: -2.5px;
+  background-color:white;
+  border-radius: 7px;
+  border: 1px solid lightgray;
+  }
+
+.navbar{
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+ 
+}
+
+
+.corner_icons{
+  width: 150px;
+  display: flex;
+  
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 150px;
+  
+ 
+  
+}
+.corner_icons2  {
+  
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ padding-left: 40px;
 }

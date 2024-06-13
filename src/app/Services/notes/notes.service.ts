@@ -57,4 +57,26 @@ export class NotesService {
   }
 
 
+  updateNotes(reqData:any,notesId:any){
+    let header={
+      headers: new HttpHeaders({
+        'content-type':'application/json',
+        'Authorization':'Bearer '+this.token
+
+      })
+    }
+    return this.httpService.putServices(`https://localhost:5001/api/Notes/UpdateByNotesId?notesId=`+notesId,reqData,true,header);
+  }
+
+  notesColor(reqData:any){
+    console.log(reqData)
+    let header={
+      headers:new HttpHeaders({
+        'content-type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpService.putServices('https://localhost:5001/api/Notes/Backgroundcolour?colour='+reqData.colour+'&NotesId='+reqData.notesId,reqData,true,header);
+  }
+
 }

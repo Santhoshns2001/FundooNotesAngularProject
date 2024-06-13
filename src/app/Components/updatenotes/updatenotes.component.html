@@ -1,0 +1,26 @@
+<div>
+    <div class="text-title">
+        <div>
+            <input  [(ngModel)]="title"  class="inputtitle">
+            <div style="direction: rtl; margin: auto;">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m640-480 80 80v80H520v240l-40 40-40-40v-240H240v-80l80-80v-280h-40v-80h400v80h-40v280Zm-286 80h252l-46-46v-314H400v314l-46 46Zm126 0Z"/></svg>
+            </div>
+        </div>
+       
+    </div>
+        <div class="text-body">
+            <textarea  [(ngModel)]="description" class="inputdesc"></textarea>
+            <!-- <input  [(ngModel)]="description" class="inputdesc"> -->
+        </div>
+        <div class="footer_icons">
+        <app-icons></app-icons>
+        <div style="display: flex;">
+        <img src="../../assets/undo_icon_small.svg" alt="undo_small">
+        <img src="../../assets/redo_icon_small.svg" alt="redo_small">
+        </div>
+            <div>
+             <button mat-icon-button (click)="closeDailog()" style="opacity: 0.9; background: none; border: none; margin-left: 150px;" >Close
+             </button>
+            </div>
+        </div>
+</div>

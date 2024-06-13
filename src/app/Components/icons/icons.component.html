@@ -1,28 +1,33 @@
 
-<mat-action-row class="notefooter" style="direction: ltr;">
-    <div>
+<div class="notefooter" >
+    
      <button mat-icon-button title="Remind me">
-         <mat-icon>add_alert</mat-icon>
+        <img src="../../assets/add_alert.svg" alt="remindme_image">
      </button>
 
      <button mat-icon-button title="collaborator">
-         <mat-icon>person_add</mat-icon>
+        <img src="../../assets/add_person.svg" alt="add_personImage">
      </button>
 
-     <button mat-icon-button title="Background options">
-         <mat-icon>palette</mat-icon>
+     <button mat-icon-button title="Background color" [matMenuTriggerFor]="paletteMenu">
+       <img src="../../assets/color_palate.svg" alt="background_image">
      </button>
+     <mat-menu #paletteMenu="matMenu">
+        <div *ngFor = 'let colors of colorArray' style="display: inline; width: 500px; ">
+        <button mat-menu-item class="circle" [style.background]="colors.code" (click)="selectColor(colors)"></button>
+        </div>
+     </mat-menu>
 
      <button mat-icon-button title="Add Image">
-         <mat-icon>image</mat-icon>
+        <img src="../../assets/image.svg" alt="image_icon">
      </button>
 
      <button mat-icon-button  (click)="onArchive()" title="Archive">
-         <mat-icon>archive</mat-icon>
+         <img src="../../assets/archive_icon.svg" alt="archive_icon">
      </button>
 
      <button mat-icon-button [matMenuTriggerFor]="moremenu" title="more">
-         <mat-icon>more_vert</mat-icon>
+         <img src="../../assets/more_icon.svg" alt="more_icon">
      </button>
      <mat-menu  #moremenu="matMenu" xPosition="before">
         <button mat-menu-item (click)="onDelete()">Delete Note </button>
@@ -31,21 +36,7 @@
         <button mat-menu-item >Make a copy</button>
         <button mat-menu-item >Show checkboxes</button>
      </mat-menu>
-
-     <button mat-icon-button title="undo">
-         <mat-icon>undo</mat-icon>
-     </button>
-
-     <button mat-icon-button title="redo">
-         <mat-icon>redo</mat-icon>
-     </button>
-    </div>
-     <div>
-         <button mat-button class="close_button">
-             <span style="font-size: 18px;">Close</span>
-         </button>
-     </div>
- </mat-action-row>
+ </div>
 
  
 

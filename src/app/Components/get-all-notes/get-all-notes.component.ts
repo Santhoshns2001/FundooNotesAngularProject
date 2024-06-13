@@ -19,8 +19,17 @@ export class GetAllNotesComponent implements OnInit{
       console.log(response);
       this.notesArray=response.data;
       console.log(this.notesArray);
-
+      this.notesArray.reverse();
     })
   }
+
+  createRefreshEvent($event:any){
+  this.OnNotesCreate()
+  }
+
+  createUpdateRefreshEvent($event:any){
+    this.OnNotesCreate()
+  }
+  
 
 }

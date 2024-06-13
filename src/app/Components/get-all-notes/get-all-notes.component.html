@@ -1,5 +1,5 @@
-<app-takenote></app-takenote>
+<app-takenote (refreshEventCreate)="createRefreshEvent($event)"></app-takenote>
 
-<app-displaynotes [notesList]="notesArray"></app-displaynotes>
+<app-displaynotes [notesList]="notesArray" (updateAutoRefresh)="createUpdateRefreshEvent($event)"></app-displaynotes>
 
 
