@@ -1,21 +1,22 @@
-
 <div class="notes-list">
-    <div *ngFor="let notes of notesList | filter:filterNote" class="card">
+    <div *ngFor="let notes of trashList" class="card">
         <mat-card class="notesContainer" [style.background]="notes.colour"  >
-            <mat-card-title mat-input class="title" (click)="editNoteDailog(notes)">
+            <mat-card-title mat-input class="title">
                 <div>{{notes.title}}</div>
             </mat-card-title>
-
-            <mat-card-content (click)="editNoteDailog(notes)">
+            <mat-card-content>
                 <div class="text" style="min-height: 35px; display: block; overflow-wrap: break-word;">
                     <h3 class="">{{notes.description}}</h3>
                 </div>
             </mat-card-content>
-
             <div>{{notes.notesId}}</div>
             <div>
-
-            <app-icons [notesObject]="notes" (refreshIconEvent)="recievedRefreshIconEvent($event)"></app-icons>
+                <button mat-icon-button title="delte permenent">
+                    <img src="../../assets/delete_icon.svg" alt="delete_forever" >
+                </button >
+                <button mat-icon-button (click)="restore(notes)" title="restore">
+                    <img  src="../../assets/restore_icon.svg" alt="restore_icon">
+                </button>
         </div>
         </mat-card>
     </div>

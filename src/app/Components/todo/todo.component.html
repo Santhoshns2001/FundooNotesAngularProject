@@ -1,0 +1,31 @@
+
+
+
+
+<!-- Description: Create a simple Todo List application where users can add, edit, and delete tasks.
+Requirements:
+Display a list of todos.
+Provide an input field and a button to add new todos.
+Allow users to edit existing todos.
+Allow users to delete todos.
+Key Concepts: Components, Data Binding, Event Handling, Two-way Data Binding, Structural Directives (*ngFor, *ngIf). -->
+
+  
+  <div>
+    <h1>To Do List </h1>
+    <input #todoinputnew placeholder="New task">
+    <button (click)="addTodo(todoinputnew)">Add</button>
+    <ul>
+        <li *ngFor="let todo of todos">
+            <div *ngIf="!todo.isEditing" >{{todo.title}}
+                 <button (click)="editTodo(todo)">Edit</button>
+                 <button (click)="deleteTodo(todo.title)">Delete</button>
+            </div>
+            <div *ngIf="todo.isEditing" >
+            <input #editTodoInput [value]="todo.title">
+            <button (click)="saveTodo(todo,editTodoInput)">save</button>
+            </div>
+           
+        </li>
+    </ul>
+  </div>

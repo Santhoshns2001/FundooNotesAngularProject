@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NotesService } from '../../Services/notes/notes.service';
 import { FormGroup } from '@angular/forms';
 
@@ -13,6 +13,10 @@ export class IconsComponent implements OnInit {
   constructor(private notes: NotesService) { }
 
   @Input() notesObject: any;
+  @Output() refreshIconEvent = new EventEmitter<string>();
+
+  @Output() refreshEventForRestoreArchive = new EventEmitter<string>();
+
   ngOnInit(): void {
 
   }
@@ -23,7 +27,12 @@ export class IconsComponent implements OnInit {
       notesId: this.notesObject.notesId
     }
     console.log(reqData)
-    this.notes.archiveNotes(reqData).subscribe((result: any) => { console.log(result) })
+    this.notes.archiveNotes(reqData).subscribe((result: any) => { 
+      console.log(result) 
+      this.refreshIconEvent.emit(result);
+      
+      // this.refreshEventForRestoreArchive.emit(result);
+    })
   }
 
 
@@ -32,7 +41,10 @@ export class IconsComponent implements OnInit {
       notesId: this.notesObject.notesId
     }
     console.log(reqData)
-    this.notes.trashNotes(reqData).subscribe((result: any) => { console.log(result) })
+    this.notes.trashNotes(reqData).subscribe((result: any) => { 
+      console.log(result) 
+      this.refreshIconEvent.emit(result);
+    })
   }
 
 
@@ -55,7 +67,8 @@ export class IconsComponent implements OnInit {
       notesId: this.notesObject.notesId
     }
     this.notes.notesColor(reqData).subscribe((res: any) => {
-      console.log(res)
+      console.log(res);
+      this.refreshIconEvent.emit(res);
     })
 
   }

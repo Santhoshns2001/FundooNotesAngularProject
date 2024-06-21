@@ -19,7 +19,17 @@ export class GetAllNotesComponent implements OnInit{
       console.log(response);
       this.notesArray=response.data;
       console.log(this.notesArray);
-      this.notesArray.reverse();
+      console.log("stored to array variable")
+     // this.notesArray.reverse();
+      this.notesArray=this.notesArray.filter((object:any)=>{
+        return object.isTrash==false;
+      });
+      this.notesArray=this.notesArray.filter((object:any)=>{
+        return object.isArchive==false;
+      });
+      console.log(this.notesArray);
+      this.notesArray.reverse()
+
     })
   }
 

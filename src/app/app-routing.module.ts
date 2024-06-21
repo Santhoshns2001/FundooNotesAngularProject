@@ -7,6 +7,10 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassword.component';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 import { UpdatenotesComponent } from './Components/updatenotes/updatenotes.component';
+import { authGuard } from './auth.guard';
+import { ArchiveComponent } from './Components/archive/archive.component';
+import { TrashComponent } from './Components/trash/trash.component';
+import { TodoComponent } from './Components/todo/todo.component';
 
 
 const routes: Routes = [
@@ -14,14 +18,18 @@ const routes: Routes = [
   {path:'resetpassword',component:ResetpasswordComponent},
   {path:'Register',component:RegisterComponent},
   {path: 'dashboard',component:DashboardComponent, 
+    canActivate:[authGuard],
     children:[
       {path:'',redirectTo:'/dashboard/getAllNotes',pathMatch:'full'},
       {path:'getAllNotes',component:GetAllNotesComponent},
+      {path: 'archive', component: ArchiveComponent},
+      {path:'trash',component:TrashComponent}
      
     ]
   },
   {path:'forgotpassword',component:ForgotpasswordComponent},
 {path:'updatenotes',component:UpdatenotesComponent},  
+{path:'todo',component:TodoComponent},
   
 ];
 

@@ -6,6 +6,7 @@ import { HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserService {
+  token:any;
 
   constructor(private httpService:HttpService) { }
 
@@ -27,5 +28,18 @@ register(reqData:any){
   }
   return  this.httpService.postMethod('https://localhost:5001/api/User/Register',reqData,false,header);
 }
+
+forgotPassword(reqData:any){
+  let header={
+    headers:new HttpHeaders({
+      'content-type':'application/json',
+    })
+  }
+  return this.httpService.postMethod('https://localhost:5001/api/User/forgetPassword?Email=',reqData.Email,true,header);
+}
+
+
+
+
 
 }

@@ -29,6 +29,12 @@ import { IconsComponent } from './Components/icons/icons.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { UpdatenotesComponent } from './Components/updatenotes/updatenotes.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { AuthguardService } from './Services/authguard/authguard.service';
+import { ArchiveComponent } from './Components/archive/archive.component';
+import { TrashComponent } from './Components/trash/trash.component';
+import { TodoComponent } from './Components/todo/todo.component';
+import {FilterPipe}from './pipes/filter.pipe';
+
 
 
 
@@ -45,8 +51,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     DisplaynotesComponent,
     IconsComponent,
     UpdatenotesComponent,
-    
-    
+    ArchiveComponent,
+    TrashComponent,
+    TodoComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +78,8 @@ import {MatDialogModule} from '@angular/material/dialog';
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    AuthguardService
   ],
   bootstrap: [AppComponent]
 })
